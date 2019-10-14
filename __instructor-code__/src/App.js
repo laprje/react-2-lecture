@@ -1,12 +1,11 @@
 import React from 'react';
-
 import './App.css';
 import Parent from './components/Parent'
 import Blog from './components/Blog'
 import Numbers from './components/Numbers'
 
 class App extends React.Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       input: '',
@@ -22,7 +21,7 @@ class App extends React.Component {
 
   showAPancake() {
     this.setState({
-      pancakeURL : 'https://www.inspiredtaste.net/wp-content/uploads/2016/07/Pancake-Recipe-1-1200.jpg'
+      pancakeURL: 'https://images.media-allrecipes.com/userphotos/250x250/4948036.jpg'
     })
   }
 
@@ -30,21 +29,21 @@ class App extends React.Component {
     return (
       <div className="App">
         <input onChange={(event) => this.handleChange(event)} />
-        <h1>{this.state.input}</h1>  
-        <button onClick={() => this.showAPancake()}> Click for pancakes</button>
-        <img src={this.state.pancakeURL} alt=""/>
-        <hr/>
-        <hr/>
+        <h1>{this.state.input}</h1>
+        <button onClick={() => this.showAPancake()}>Click for pancakes</button>
+        <img src={this.state.pancakeURL} alt="" />
+        <hr />
+        <hr />
         <Parent />
-        <hr/>
-        <hr/>
+        <hr />
+        <hr />
         <Blog />
-        <hr/>
-        <hr/>
+        <hr />
+        <hr />
         <Numbers />
       </div>
-    );
-}
+    )
+  }
 }
 
 export default App;
